@@ -12,24 +12,24 @@ def bis_driving_score_merge_f(company,dates):
         route_ids = kj_route_id
         route_names = kj_route_name
         route_name_sets = kj_route_name_set
-        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_kj.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_kj.csv", encoding="euc-kr")[["성명", "운전자ID"]]
     elif company == "용남고속":
         route_ids = yn_route_id
         route_names = yn_route_name
         route_name_sets = yn_route_name_set
-        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_yn.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_yn.csv", encoding="euc-kr")[["성명", "운전자ID"]]
     elif company == "제부여객":
         route_ids = jb_route_id
         route_names = jb_route_name
         route_name_sets = jb_route_name_set
-        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_jb.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_jb.csv", encoding="euc-kr")[["성명", "운전자ID"]]
     elif company =="ALL":
         route_ids = all_route_id
         route_names = all_route_name
         route_name_sets = all_route_name_set
-        read_driver_kj_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_kj.csv", encoding="euc-kr")[["성명", "운전자ID"]]
-        read_driver_yn_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_yn.csv", encoding="euc-kr")[["성명", "운전자ID"]]
-        read_driver_jb_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\DRIVER_ID\driver_id_jb.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_kj_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_kj.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_yn_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_yn.csv", encoding="euc-kr")[["성명", "운전자ID"]]
+        read_driver_jb_id = pd.read_csv(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\ERP_DRIVER_ID\driver_id_jb.csv", encoding="euc-kr")[["성명", "운전자ID"]]
         read_driver_id = pd.concat([read_driver_kj_id, read_driver_yn_id, read_driver_jb_id], axis = 0)
 
     for date in dates:

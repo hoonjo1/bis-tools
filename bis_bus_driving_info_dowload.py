@@ -42,3 +42,4 @@ def bis_bus_driving_info_download_f(driver,dates,company):
         after_Name = os.path.join(rf"\\kjnas\KJNAS\1.기획부\9.개발팀\BIS_BUS_DRIVING_INFO\ATFER\{company}_{after}_버스운행정보.xls")
         print(f"BEFOR : {before} _____ AFTER : {company}_{after}_버스운행정보")
         os.rename(before_Name, after_Name)
+        print("ALL_COMPLETE")
