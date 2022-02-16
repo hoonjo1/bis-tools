@@ -4,7 +4,7 @@ import pandas
 from datetime import datetime
 
 def will_work():
-    will_worl_check = pg.confirm(text="WILL_WORK", title ="will_work_select", buttons=["BIS 운행기록표 다운로드", "BIS 운행기록표 EDIT", "BIS 운행기록표 MERGE", "BIS 버스운행정보 다운로드"])
+    will_worl_check = pg.confirm(text="WILL_WORK", title ="will_work_select", buttons=["BIS 운행기록표 다운로드", "BIS 운행기록표 EDIT", "BIS 운행기록표 MERGE", "BIS 운행기록표 노선별 MERGE", "BIS 버스운행정보 다운로드"])
     if will_worl_check == None:
         sys.exit
     return will_worl_check

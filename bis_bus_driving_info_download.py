@@ -9,6 +9,8 @@ def bis_bus_driving_info_download_f(driver,dates,company):
     loginpw = "4100800" 
     driver.get(url) 
     driver.implicitly_wait(5)
+
+    time.sleep(1)
     driver.find_element_by_id("loginid").send_keys(loginid)
     driver.find_element_by_id("loginpw").send_keys(loginpw)
     driver.find_element_by_class_name("btnGray.button").send_keys(Keys.ENTER)
