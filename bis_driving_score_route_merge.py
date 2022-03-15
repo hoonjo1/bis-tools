@@ -2,7 +2,6 @@ import pandas as pd
 from route_id import *
 from route_name import *
 
-
 def bis_driving_score_route_merge_f(company, dates):
 
     if company == "경진여객":
@@ -43,7 +42,6 @@ def bis_driving_score_route_merge_f(company, dates):
 
             result_list.append(read_data)
             result = pd.concat(result_list)
-
 
             start_date_name = dates[0]
             end_date_name = dates[-1]
