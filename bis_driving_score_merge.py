@@ -51,11 +51,11 @@ def bis_driving_score_merge_f(company,dates):
                     start_time_hour = start[0]
                     start_time_minute = start[1]
                     start_time_second = start[2]
-                    end_timeh_our = end[0] 
+                    end_timeh_hour = end[0] 
                     end_time_minute = end[1]
                     end_time_second = end[2]
                     start_time_read = dt.datetime(year=1900, month=1, day=1,  hour=int(start_time_hour), minute=int(start_time_minute), second=int(start_time_second))
-                    end_time_read = dt.datetime(year=1900, month=1, day=1,  hour=int(end_timeh_our), minute=int(end_time_minute), second=int(end_time_second))
+                    end_time_read = dt.datetime(year=1900, month=1, day=1,  hour=int(end_timeh_hour), minute=int(end_time_minute), second=int(end_time_second))
                     time_calculation = (end_time_read - start_time_read).total_seconds() 
                     time_calculation_edit = time_calculation + 60 * 60 * 24 if time_calculation < 0 else time_calculation
                     time_calculation_set = (f"{dt.timedelta(seconds=time_calculation_edit)}")
